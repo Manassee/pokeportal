@@ -15,3 +15,16 @@ function App() {
 }
 
 export default App;
+
+/*
+  App ist:
+
+der oberste UI-Container hält Layout + Seiten 👉 Du willst keine Logik hier, sondern:
+
+  Layout
+  Navigation
+  Routing (später)
+
+  Gute Regel
+  App.jsx = Orchestrator, nicht Arbeiter
+*/ 

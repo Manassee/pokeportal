@@ -6,6 +6,12 @@ import "./styles/base.css";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <App />                  {'// hier wird <App/> gerendert'}
   </StrictMode>,
 )
+
+
+/* Diese Datei ist der Startpunkt von React 
+main.jsx startet React
+App.jsx ist dein UI-Wurzelknoten */
+
