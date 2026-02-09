@@ -1,11 +1,31 @@
+import Card from "../components/Card";
+
 function Home() {
   return (
-    <section>
-      <h2>Willkommen im PokéPortal</h2>
-      <p>
-        Dieses Projekt dient dazu, React, HTML, CSS und JavaScript praxisnah zu lernen.
-      </p>
-    </section>
+    <>
+      <section className="hero">
+        <h2>Willkommen im PokéPortal</h2>
+        <p>
+          Wir bauen ein Portal mit React – Schritt für Schritt. Heute: Layout, Navigation und Cards.
+        </p>
+        <button className="btn">Zum Pokédex</button>
+      </section>
+
+      <section className="grid">
+        <Card
+          title="News"
+          text="Später zeigen wir hier Artikel, Highlights und Updates im Portal-Stil."
+        />
+        <Card
+          title="Pokédex"
+          text="Suche, Filter, Pagination und Detailseiten – das wird unser Kernfeature."
+        />
+        <Card
+          title="Features"
+          text="Dark Mode, Settings, Favoriten und später echte Daten über eine API."
+        />
+      </section>
+    </>
   );
 }
 
