@@ -8,7 +8,7 @@ function Home() {
         <p>
           Wir bauen ein Portal mit React – Schritt für Schritt. Heute: Layout, Navigation und Cards.
         </p>
-        <button className="btn">Zum Pokédex</button>
+        <button className="btn" onClick={() => alert("Pokédex Seite folgt")}>Zum Pokédex</button>
       </section>
 
       <section className="grid">
