@@ -15,14 +15,17 @@ function Home() {
         <Card
           title="News"
           text="Später zeigen wir hier Artikel, Highlights und Updates im Portal-Stil."
+          onClick={() => alert("News kommt bald")}
         />
         <Card
           title="Pokédex"
           text="Suche, Filter, Pagination und Detailseiten – das wird unser Kernfeature."
+          onClick={() => alert("Pokédex Seite folgt")}
         />
         <Card
           title="Features"
           text="Dark Mode, Settings, Favoriten und später echte Daten über eine API."
+          onClick={() => alert("Features in Arbeit")}
         />
       </section>
     </>
