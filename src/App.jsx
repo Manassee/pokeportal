@@ -1,14 +1,22 @@
+import { Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header";
 import Home from "./pages/Home";
+import Pokedex from "./pages/Pokedex";
+import NotFound from "./pages/NotFound";
 
 
 function App() {
   return (
     <>
-      <Header/>
+      <Header />
 
       <main className="container">
-        <Home/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pokedex" element={<Pokedex />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
     </>
   );

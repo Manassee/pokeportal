@@ -134,4 +134,12 @@ body {
   box-shadow: 0 10px 25px var(--accent);
 }
 
+.nav-link-active {
+  background: rgba(255 255 255 0.10);
+  color: var(-text);
+}
+
+.page {
+  padding:  22px 0;
+}
 

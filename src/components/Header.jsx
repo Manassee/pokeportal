@@ -1,10 +1,13 @@
+import {Link} from "react-router-dom";
 import Nav from "./Nav";
 
 function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <h1 className="logo" href="/">PokéPortal</h1>
+        <Link className="logo" to="/">
+          PokéPortal
+        </Link>
       </div>
     </header>
   );

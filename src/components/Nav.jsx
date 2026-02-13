@@ -1,9 +1,17 @@
 function Nav(){
+    const linkClass = ({ isActive}) =>
+        isActive ? "nav-link nav-link-active" : "nav-link";
     return (
         <nav className="nav">
-            <a className="nav-link" href="/">Home</a>
-            <a className="nav-link" href="/pokedex">Pokédex</a>
-            <a className="nav-link" href="/news">News</a>
+            <NavLink className={linkClass} to="/">
+                Home
+            </NavLink>
+
+            <NavLink className={linkClass} to="/pokedex">
+                Pokedex
+            </NavLink>
+
+            
         </nav>
     )
 }
