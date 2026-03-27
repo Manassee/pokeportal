@@ -1,0 +1,99 @@
+/* ═══════════════════════════════════════════
+   ALLGEMEIN — gilt für die gesamte Seite
+═══════════════════════════════════════════ */
+
+/*Hintergrundfarbe der Webseite*/
+body {
+    font-family: sans-serif; /* Schriftart*/
+    background: #f5f5f5;   /*Hintergrundfarbe*/
+    padding: 2rem;          /*Innenabstand: 2rem = 32px Abstand auf ALLEN 4 Seiten (oben, rechts, unten, links)*/
+}
+
+/* ═══════════════════════════════════════════
+   KARTE — der äußere Container
+═══════════════════════════════════════════ */
+.pokemon-karte {
+
+    width: 180px;               /*Feste breite der Karte in Pixel*/
+    background: white;        /*Kartenhintergrund weiß - überschreibt das Grau vom body*/
+    border: 1px solid #ddd;     /* Rahmen: 1px dick, durchgezogen (solid), hellgrau (#ddd) */ /* Kurzschreibweise für: border-width border-style border-color */
+    border-radius: 12px;        /* Rundet die ECKEN ab. 0 = eckig, hoher Wert = rund. 12px = leicht abgerundet */
+    overflow: hidden;           /* Alles was über den Rand der Karte ragt wird abgeschnitten */ /* Wichtig damit das Bild die abgerundeten Ecken respektiert */
+}
+
+
+/*------------ Kopfzeile ------------------*/
+.karte-header{
+    padding: 10px 12px 4px;     /* Innenabstand mit 3 Werten: oben=10px, rechts+links=12px, unten=4px */
+                              /* Reihenfolge: Uhrzeigersinn — oben, rechts&links, unten */
+                             /* 4 Werte wären: oben, rechts, unten, links */    
+}
+
+.karte-nummer {
+    font-size: 11px;        /* Schriftgröße in Pixel. Kleiner als der Name, wirkt dezent */
+    color: #999;            /* Schriftfarbe: mittleres Grau. #999 = Kurzform für #999999 */
+}
+
+
+/*---------- Bildbereich ----------------------*/
+
+.karte-bild-bereich {
+    display: flex;           /* Aktiviert Flexbox — modernes Layout-System */
+                             /* Kindelemente werden jetzt nebeneinander angeordnet */
+    justify-content: center; /* Zentriert den Inhalt HORIZONTAL (auf der Hauptachse) */
+                             /* Ohne das würde das Bild links kleben */
+    padding: 8px 0;          /* Innenabstand: 8px oben+unten, 0 rechts+links */
+                             /* 2 Werte: erster = oben&unten, zweiter = rechts&links */
+}
+
+.karte-bild-bereich img {   /* Nur <img> Tags die INNERHALB von .karte-bild-bereich sind */
+    width: 80px;             /* Breite des Bildes in Pixel */
+    height: 80px;            /* Höhe des Bildes in Pixel */
+    image-rendering: pixelated; /* Pixel-Art Sprites scharf darstellen statt weich interpolieren */
+                                /* Ohne das wirken die Sprites verschwommen wenn sie skaliert werden */
+}
+
+
+/* ═══════════════════════════════════════════
+   INFO-BEREICH — Name und Typ-Badges
+═══════════════════════════════════════════ */
+
+.karte-info {
+    padding: 8px 12px 12px; /* oben=8px, rechts+links=12px, unten=12px */
+                             /* Mehr Abstand unten als oben — wirkt ausgewogener */
+}
+
+.karte-name {
+    font-size: 14px;          /* Größer als die Nummer, kleiner als eine Überschrift */
+    font-weight: bold;        /* Schriftgewicht: bold = fett. Alternativen: normal, 100–900 */
+    margin-bottom: 6px;       /* AUßENabstand nach unten — Abstand zwischen Name und Badge */
+                              /* margin = außen, padding = innen — wichtiger Unterschied! */
+    text-transform: capitalize; /* Ersten Buchstaben groß: "pikachu" → "Pikachu" */
+                                /* Nützlich weil die API alles klein zurückgibt */
+}
+
+
+/* ═══════════════════════════════════════════
+   TYP-BADGES — farbige Pillen für jeden Typ
+═══════════════════════════════════════════ */
+
+.typ-badge {
+    display: inline-block; /* Verhält sich wie ein Block (hat Breite/Höhe) bleibt aber in der Textzeile */
+                           /* Nötig damit padding und border-radius korrekt funktionieren */
+    font-size: 11px;       /* Kleiner als der Name — Badges sind sekundäre Info */
+    padding: 2px 8px;      /* oben+unten=2px, rechts+links=8px — typisches Badge-Maß */
+    border-radius: 20px;   /* Sehr hoher Wert = vollständig abgerundete Seiten = Pille */
+    font-weight: 500;      /* Halbfett — zwischen normal (400) und bold (700) */
+}
+
+/* ── Jeder Typ bekommt seine eigene Hintergrund- und Schriftfarbe ── */
+/* Beide Farben kommen aus derselben Farbfamilie: heller Hintergrund, dunkle Schrift */
+
+.typ-fire     { background: #FAECE7; color: #712B13; } /* Rot-Orange Töne */
+.typ-water    { background: #E6F1FB; color: #0C447C; } /* Blau Töne */
+.typ-grass    { background: #EAF3DE; color: #27500A; } /* Grün Töne */
+.typ-electric { background: #FAEEDA; color: #633806; } /* Gelb-Orange Töne */
+.typ-psychic  { background: #EEEDFE; color: #3C3489; } /* Lila Töne */
+.typ-poison   { background: #FBEAF0; color: #72243E; } /* Pink Töne */
+.typ-normal   { background: #F1EFE8; color: #444441; } /* Grau Töne */
+.typ-flying   { background: #E1F5EE; color: #085041; } /* Türkis Töne */
