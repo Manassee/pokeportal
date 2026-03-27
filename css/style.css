@@ -14,24 +14,31 @@ body {
 ═══════════════════════════════════════════ */
 .pokemon-karte {
 
-    width: 180px;               /*Feste breite der Karte in Pixel*/
+    width: 280px;               /*Feste breite der Karte in Pixel*/
+    height: 400px;
     background: white;        /*Kartenhintergrund weiß - überschreibt das Grau vom body*/
     border: 1px solid #ddd;     /* Rahmen: 1px dick, durchgezogen (solid), hellgrau (#ddd) */ /* Kurzschreibweise für: border-width border-style border-color */
     border-radius: 12px;        /* Rundet die ECKEN ab. 0 = eckig, hoher Wert = rund. 12px = leicht abgerundet */
     overflow: hidden;           /* Alles was über den Rand der Karte ragt wird abgeschnitten */ /* Wichtig damit das Bild die abgerundeten Ecken respektiert */
+
+    display: flex;              /* Karte wird zum Flex-Container */
+    flex-direction: column;     /* Kinder untereinander (statt nebeneinander) */
+    align-items: center;        /* Kinder HORIZONTAL zentrieren */
+    justify-content: center;    /* Kinder VERTIKAL zentrieren */
 }
 
 
 /*------------ Kopfzeile ------------------*/
 .karte-header{
-    padding: 10px 12px 4px;     /* Innenabstand mit 3 Werten: oben=10px, rechts+links=12px, unten=4px */
+    padding: 5px 12px 4px;     /* Innenabstand mit 3 Werten: oben=10px, rechts+links=12px, unten=4px */
                               /* Reihenfolge: Uhrzeigersinn — oben, rechts&links, unten */
                              /* 4 Werte wären: oben, rechts, unten, links */    
 }
 
 .karte-nummer {
-    font-size: 11px;        /* Schriftgröße in Pixel. Kleiner als der Name, wirkt dezent */
+    font-size: 20px;        /* Schriftgröße in Pixel. Kleiner als der Name, wirkt dezent */
     color: #999;            /* Schriftfarbe: mittleres Grau. #999 = Kurzform für #999999 */
+    margin-bottom: 20px;
 }
 
 
@@ -47,10 +54,14 @@ body {
 }
 
 .karte-bild-bereich img {   /* Nur <img> Tags die INNERHALB von .karte-bild-bereich sind */
-    width: 80px;             /* Breite des Bildes in Pixel */
-    height: 80px;            /* Höhe des Bildes in Pixel */
-    image-rendering: pixelated; /* Pixel-Art Sprites scharf darstellen statt weich interpolieren */
+    width: 120px;             /* Breite des Bildes in Pixel */
+    height: 120px;            /* Höhe des Bildes in Pixel */
+    image-rendering: auto; /* Pixel-Art Sprites scharf darstellen statt weich interpolieren */
                                 /* Ohne das wirken die Sprites verschwommen wenn sie skaliert werden */
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 
@@ -64,7 +75,7 @@ body {
 }
 
 .karte-name {
-    font-size: 14px;          /* Größer als die Nummer, kleiner als eine Überschrift */
+    font-size: 20px;          /* Größer als die Nummer, kleiner als eine Überschrift */
     font-weight: bold;        /* Schriftgewicht: bold = fett. Alternativen: normal, 100–900 */
     margin-bottom: 6px;       /* AUßENabstand nach unten — Abstand zwischen Name und Badge */
                               /* margin = außen, padding = innen — wichtiger Unterschied! */
@@ -80,10 +91,11 @@ body {
 .typ-badge {
     display: inline-block; /* Verhält sich wie ein Block (hat Breite/Höhe) bleibt aber in der Textzeile */
                            /* Nötig damit padding und border-radius korrekt funktionieren */
-    font-size: 11px;       /* Kleiner als der Name — Badges sind sekundäre Info */
+    font-size: 15px;       /* Kleiner als der Name — Badges sind sekundäre Info */
     padding: 2px 8px;      /* oben+unten=2px, rechts+links=8px — typisches Badge-Maß */
     border-radius: 20px;   /* Sehr hoher Wert = vollständig abgerundete Seiten = Pille */
     font-weight: 500;      /* Halbfett — zwischen normal (400) und bold (700) */
+    margin-left: 10px;
 }
 
 /* ── Jeder Typ bekommt seine eigene Hintergrund- und Schriftfarbe ── */
@@ -92,7 +104,7 @@ body {
 .typ-fire     { background: #FAECE7; color: #712B13; } /* Rot-Orange Töne */
 .typ-water    { background: #E6F1FB; color: #0C447C; } /* Blau Töne */
 .typ-grass    { background: #EAF3DE; color: #27500A; } /* Grün Töne */
-.typ-electric { background: #FAEEDA; color: #633806; } /* Gelb-Orange Töne */
+.typ-electric { background: #f3e73b; color: #6d6b08; } /* Gelb-Orange Töne */
 .typ-psychic  { background: #EEEDFE; color: #3C3489; } /* Lila Töne */
 .typ-poison   { background: #FBEAF0; color: #72243E; } /* Pink Töne */
 .typ-normal   { background: #F1EFE8; color: #444441; } /* Grau Töne */
