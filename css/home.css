@@ -1,0 +1,229 @@
+/* ═══════════════════════════════════════════
+   HERO SECTION
+═══════════════════════════════════════════ */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: #1a1a2e;
+    min-height: 400px;
+}
+
+.hero-eyebrow{
+    font-size: 11px;
+
+    font-weight: 500;
+    /*
+        Schriftstärke — halbfett.
+        Skala: 100 (dünn) → 400 (normal) → 500 (mittel) → 700 (fett) → 900 (schwarz)
+        500 = etwas kräftiger als normal, aber nicht so schwer wie bold (700).
+        Passt gut zu Großbuchstaben — wirkt professionell ohne zu schreien.
+    */
+    color: #9FE1CB;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.hero-sub{
+    font-size: 1rem;
+    color: #9090aa;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    max-width: 480px;
+}
+
+.btn-primary{
+
+    display: inline-block;
+    text-decoration: none;
+    background: #1D9E75;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover{
+    background: #0f6e56;
+}
+
+.hero-sprites {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.hero-sprites img{
+    width: 100px;
+    height: 100px;
+    image-rendering: auto;
+}
+
+/* ═══════════════════════════════════════════
+   FEATURE KARTEN
+═══════════════════════════════════════════ */
+
+.features {
+
+    padding: 3rem 2rem;
+    background: #f9f9f9;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.feature-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:16px;
+}
+
+.feature-karte{
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+
+}
+
+.feature-karte:hover {
+    border-color: #1D9E75;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.feature-karte h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.feature-karte p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.feature-karte a {
+    font-size: 0.875rem;
+    color: #1D9E75;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.feature-karte a:hover {
+    text-decoration: underline;
+}
+
+/* ═══════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════ */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;            /* umbricht auf Mobile */
+    gap: 2rem;
+    padding: 2.5rem 2rem;
+    background: #1a1a2e;        /* gleiche Farbe wie Hero */
+    border-top: 1px solid #2a2a4e;
+}
+
+.footer-logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.footer-brand p {
+    font-size: 13px;
+    color: #9090aa;
+}
+
+.footer-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.footer-spalte h4 {
+    font-size: 11px;
+    font-weight: 500;
+    color: #9090aa;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+}
+
+.footer-spalte a {
+    display: block;             /* jeder Link in eigener Zeile */
+    font-size: 14px;
+    color: #cccccc;
+    text-decoration: none;
+    margin-bottom: 6px;
+    transition: color 0.2s;
+}
+
+.footer-spalte a:hover {
+    color: white;
+}
+
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — Mobile unter 768px
+═══════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+    /* Hero untereinander statt nebeneinander */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .hero-sub {
+        max-width: 100%;
+    }
+
+    /* Feature Karten: 1 Spalte statt 3 */
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer untereinander */
+    .footer {
+        flex-direction: column;
+    }
+}
+
+

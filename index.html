@@ -5,10 +5,105 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PokéPortal</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/home.css">
         <link rel="icon" href="assets/favicon-16x16.png">
     </head>
 
     <body>
 
+        <!-- NAVBAR -->
+         <nav class="navbar">
+            <div class="navbar-logo">PokéPortal</div>
+            <ul class="navbar-links">
+                <li><a href="index.html" class="aktiv">Startseite</a></li>
+                <li><a href="pages/pokedex.html">Pokédex</a></li>
+                <li><a href="pages/favoriten.html">favoriten</a></li>
+            </ul>
+         </nav>
+
+         <!-- HERO -->
+          <section class="hero">
+                <div class="hero-text">
+                    <p class="hero-eyebrow">Generation I</p>
+                    <h1 class="hero-title">Entdecke alle 151 Pokémon</h1>
+                    <p class="hero-sub">
+                        Durchsuche den kompletten Pokédex, entdecke Typen,
+                        Fähigkeiten und speichere deine Favoriten.
+                    </p>
+                    <a href="pages/pokedex.html" class="btn-primary">Pokédex öffnen</a>
+                </div>
+
+                <div class="hero-sprites">
+                    <img src="sprites/sprites/pokemon/25.png" alt="Pikachu">
+                    <img src="sprites/sprites/pokemon/392.png" alt="Panferno">
+                    <img src="sprites/sprites/pokemon/448.png" alt="Lucario">
+                </div>
+          </section>
+
+          <!-- FEATURE KARTEN -->
+          <section class="features">
+        <h2 class="section-titel">Erkunden</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-karte">
+                <span class="feature-icon">&#128218;</span>
+                <h3>Pokédex</h3>
+                <p>Alle 151 Pokémon der ersten Generation mit Typen und animierten Sprites.</p>
+                <a href="pages/pokedex.html">Pokédex öffnen →</a>
+            </div>
+
+            <div class="feature-karte">
+                <span class="feature-icon">&#11088;</span>
+                <h3>Favoriten</h3>
+                <p>Speichere deine Lieblings-Pokémon und greife jederzeit darauf zu.</p>
+                <a href="pages/favoriten.html">Favoriten ansehen →</a>
+            </div>
+
+            <div class="feature-karte">
+                <span class="feature-icon">&#128269;</span>
+                <h3>Suche</h3>
+                <p>Finde jedes Pokémon blitzschnell nach Name oder Typ.</p>
+                <a href="pages/pokedex.html">Suche starten →</a>
+            </div>
+
+        </div>
+    </section>
+        <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="footer-brand">
+            <span class="footer-logo">PokéPortal</span>
+            <p>Lernprojekt — Frontend Entwicklung</p>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-spalte">
+                <h4>Seiten</h4>
+                <a href="index.html">Startseite</a>
+                <a href="pages/pokedex.html">Pokédex</a>
+                <a href="pages/favoriten.html">Favoriten</a>
+            </div>
+            <div class="footer-spalte">
+                <h4>Ressourcen</h4>
+                <a href="https://pokeapi.co" target="_blank">PokéAPI</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
     </body>
 </html>
+
+<!----- 
+Das ist das Grundgerüst jeder HTML-Seite.
+
+    Das <!DOCTYPE html> in Zeile 2 ist kein Tag, es ist eine Deklaration, die dem Browser sagt "dies ist ein HTML5-Dokument". Ohne diese Zeile schaltet der Browser in einen 
+    Kompatibilitätsmodus, der zu unvorhersehbarem Verhalten führt.
+    Das <html lang="de" ist das Wurzelelement. Alles andere lebt  darin. Das lang Attribut hilft Suchmaschinen und Screenreadern, die Sprache zu erkennen.
+
+    Im <head> stecken unsichtbare Infos: charset="UTF-8" sorgt dafür, dass Umlaute(ä,ö,ü) und Sonderzeichen korrekt angeziegt werden. Die viewport-Meta macht die Seite mobilfreundlich. 
+    Der  <title> erscheint im Browser-Tab.
+    
+    Im <body> steht alles, was der Nutzer sieht: <h1> ist die wichtigste Überschrift der Seite, <p> ein Textabsatz.
+
+-->
